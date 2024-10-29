@@ -1,0 +1,102 @@
+.popupOverlay{
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    opacity: 0;
+    transition: all 700ms ease;
+}
+
+.popupOverlay.active{
+    opacity: 1;
+}
+
+.pageContent{
+    max-width: 700px;
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+}
+
+.pageContent .p{
+    line-height: 2;
+}
+
+.popupContainer{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% + 50px));
+    font-family: "Playwrite England Semi-Joined", sans-serif;
+    color: white;
+    padding: 12px 0px;
+    box-shadow: 0 6px 55px -10px rgba(0, 0, 0, 0.7);
+    background-image: url(images/background.jpg);
+    background-size: cover;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all 700ms ease;
+}
+
+.popupOverlay.active .popupContainer{
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popupContainer,
+.popupContainer * {
+    box-sizing: border-box;
+}
+
+.popupContainer .left img{
+    position: absolute;
+    bottom: 0;
+}
+
+.popupContainer .right{
+    width: 540px;
+    padding: 16px;
+    padding-left: 150px;
+}
+
+.popupContainer .skipButton{
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: black;
+    padding: 2px 6px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.popupContainer p.logo{
+    font-size: 13px;
+    color: #febdff;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.popupContainer h2.popupHeading{
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.popupContainer p.description{
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.popupContainer a.visitSiteButton{
+    background-color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    padding: 8px 24px;
+    margin-top: 8px;
+    display: inline-block;
+}
